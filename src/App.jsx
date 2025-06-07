@@ -1,9 +1,15 @@
+import { Header } from "./Components/Header"
+import { ProductCatalog  } from "./Components/ProductCatalog"
+
 function App() {
   return (
-    <h1 class="text-3xl font-bold underline text-red-700">
-      Hello world!
-    </h1>
-  )
+  <div className="bg-gray-100 min-h-screen">Add commentMore actions
+      <div className="max-w-3xl mx-auto">
+        <Header />
+        <ProductCatalog />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
