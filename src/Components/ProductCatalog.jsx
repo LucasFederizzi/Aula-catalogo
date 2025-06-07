@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useCart } from "../contexts/CartContext";
 
 export const ProductCatalog = () => {
   const [products, setProducts] = useState([]);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     // Substitua a URL abaixo pela URL real da sua API
@@ -31,7 +33,10 @@ export const ProductCatalog = () => {
                 R$ {product.price}
               </span>
             </div>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Add commentMore actions
+            <button commentMore actions
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              onClick={() => addToCart(product)}
+            >
               Adicionar ao carrinho
             </button>
           </li>
